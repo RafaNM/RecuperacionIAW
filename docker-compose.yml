@@ -1,0 +1,27 @@
+version '3'
+
+services:
+
+ mongo:
+
+  container_name: mongo
+
+  image: mongo
+
+ ports:
+
+  -'27017:27017'
+
+ volumes:
+
+  - /mongodb:/data/db
+
+  - /mongo_init:/docker-entrypoint-init.db.d
+
+ enviroment:
+
+  MONGO_INITDB_ROOT_USERNAME: admin
+
+  MONGO_INITDB_ROOT_PASWORD: pass
+
+  MONGO_INITDB_DATABASE: hoteles
