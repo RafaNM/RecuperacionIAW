@@ -1,0 +1,37 @@
+<h1>All our hotels</h1>
+<div class="cartas">
+
+{{#if hotels}}
+<table>
+    <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Stars</th>
+    <th>Price</th>
+    <th>Profesional Rating</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Web</th>
+    <th>Type</th>
+    </tr>
+{{#each hotels}}
+    <tr>
+        <th>{{name}}</th>
+        <th>{{location}}</th>
+        <th>{{stars}}</th>
+        <th>{{price}}</th>
+        <th>{{prating}}</th>
+        <th>{{phone}}</th>
+        <th>{{email}}</th>
+        <th>{{web}}</th>
+        <th>{{type}}</th>
+    </tr>
+{{/each}}
+</table>
+
+<button onclick="location.href='http://localhost/add'">Add hotels</button>
+
+{{else}}
+    <p>Something's wrong</p>
+{{/if}}
+</div>

@@ -1,0 +1,99 @@
+{{#if hotels}}
+<h1>{{hotels.name}}</h1>
+<div>
+    <div class="row">
+        <div id="rsite" class="col s6">
+
+            <table>
+                <tbody>
+                    
+                    <tr>
+                        <td><b>Price valoration from 1 to 5: </b></td>
+                        <td>{{hotels.price}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Quality valoration: </b></td>
+                        <td>{{hotels.prating}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Contact number: </b></td>
+                        <td>{{hotels.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Contact email: </b></td>
+                        <td>{{hotels.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{hotels.location}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><b>Schedule:</b></td>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>{{hotels.schedule.[0].Monday}}</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>{{hotels.schedule.[1].Tuesday}}</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>{{hotels.schedule.[2].Wednesday}}</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>{{hotels.schedule.[3].Thursday}}</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>{{hotels.schedule.[4].Friday}}</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>{{hotels.schedule.[5].Saturday}}</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>{{hotels.schedule.[6].Sunday}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <img class="images col s6" src="{{hotels.image}}" width="400" height="225">
+    </div>
+</div>
+{{else}}
+<p>Something's wrong</p>
+{{/if}}
+</div>
+
+<div class="mapouter container">
+    <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+            src="https://maps.google.com/maps?q={{hotels.location}}&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://123movies-to.org"></a><br>
+        <style>
+            .mapouter {
+                position: relative;
+                text-align: right;
+                height: 500px;
+                width: 600px;
+            }
+        </style><a href="https://www.embedgooglemap.net">embedding google maps into website</a>
+        <style>
+            .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 500px;
+                width: 600px;
+            }
+        </style>
+    </div>
+</div>

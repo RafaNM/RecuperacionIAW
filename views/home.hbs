@@ -1,0 +1,45 @@
+<h1>Best rated hotels</h1>
+<div class="cartas">
+{{#if hotels}}
+{{#each hotels}}
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                </div>
+                <a title="Full" href="/hotel/{{_id}}"><img class="responsive-img" src="{{image}}" width="400" height="225"></a>
+                <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{name}}<i class="material-icons right">show more</i></span>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Stars</th>
+                            <th>Price</th>
+                            <th>Profesional Rating</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Web</th>
+                            <th>Type</th>
+                        </tr>
+                        <tr>
+                            <th>{{name}}</th>
+                            <th>{{location}}</th>
+                            <th>{{stars}}</th>
+                            <th>{{price}}</th>
+                            <th>{{prating}}</th>
+                            <th>{{phone}}</th>
+                            <th>{{email}}</th>
+                            <th>{{web}}</th>
+                            <th>{{type}}</th>
+                        </tr>
+                    </table>
+                    <div><a href="/hotel/{{_id}}">More Info</a></div>
+                </div>
+            </div>
+    {{/each}}
+{{else}}
+    <p>Something's wrong</p>
+{{/if}}
+</div>
