@@ -12,7 +12,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: pass
-      MONGO_INITDB_DATABASE: restaurants
+      MONGO_INITDB_DATABASE: hotels
       
   mongo-express:
     image: mongo-express

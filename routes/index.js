@@ -30,14 +30,19 @@ router.get('/backend', async (req, res) => {
 })
 
 // @desc abaut
-// @route GET /abaut
+// @route GET /About
 router.get('/about', (req, res) => {
     res.render('about')
 })
 
-// @route GET /About
+// @route GET /Contact
 router.get('/contact', (req, res) => {
     res.render('contact');
+});
+
+// @route GET /Booking
+router.get('/booking', (req, res) => {
+    res.render('booking');
 });
 
 // @desc    Show full restaurant info

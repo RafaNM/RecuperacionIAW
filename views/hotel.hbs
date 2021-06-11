@@ -1,9 +1,32 @@
 {{#if hotels}}
 <h1>{{hotels.name}}</h1>
+    <img class="images col s6" id="img" src="{{hotels.image}}" width="400" height="225">
+    <div id="map">
+    <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+            src="https://maps.google.com/maps?q={{hotels.location}}&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://123movies-to.org"></a><br>
+        <style>
+            .mapouter {
+                position: relative;
+                text-align: right;
+                height: 500px;
+                width: 600px;
+            }
+        </style><a href="https://www.embedgooglemap.net">embedding google maps into website</a>
+        <style>
+            .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 500px;
+                width: 600px;
+            }
+        </style>
+    </div>
+</div>
 <div>
     <div class="row">
         <div id="rsite" class="col s6">
-
             <table>
                 <tbody>
                     
@@ -18,6 +41,18 @@
                     <tr>
                         <td><b>Contact number: </b></td>
                         <td>{{hotels.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Stars: </b></td>
+                        <td>{{hotels.stars}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>website: </b></td>
+                        <td>{{hotels.web}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Type: </b></td>
+                        <td>{{hotels.type}}</td>
                     </tr>
                     <tr>
                         <td><b>Contact email: </b></td>
@@ -62,38 +97,43 @@
                         <td>Sunday</td>
                         <td>{{hotels.schedule.[6].Sunday}}</td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
-        <img class="images col s6" src="{{hotels.image}}" width="400" height="225">
     </div>
+
+<div class="row">
+    <div id="fcf-form">
+    <h3 class="col s12">Contact us</h3>
+    <form id="fcf-form-id" class="col s12" method="POST">
+        <div class="col s12">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+        <div class="col s12">
+            <label for="Email" class="fcf-label">Specify time and day</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+        <div class="col s12">
+            <label for="Message" class="fcf-label">Specify number of people</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+        <div class=class="col s12">
+            <button type="submit" id="fcf-button" class="col s2"><a href="/">Send Message</a></button>
+        </div>
+    </form>
+    </div>
+
+</div>
+</div>
 </div>
 {{else}}
 <p>Something's wrong</p>
 {{/if}}
-</div>
-
-<div class="mapouter container">
-    <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
-            src="https://maps.google.com/maps?q={{hotels.location}}&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-            href="https://123movies-to.org"></a><br>
-        <style>
-            .mapouter {
-                position: relative;
-                text-align: right;
-                height: 500px;
-                width: 600px;
-            }
-        </style><a href="https://www.embedgooglemap.net">embedding google maps into website</a>
-        <style>
-            .gmap_canvas {
-                overflow: hidden;
-                background: none !important;
-                height: 500px;
-                width: 600px;
-            }
-        </style>
-    </div>
 </div>
